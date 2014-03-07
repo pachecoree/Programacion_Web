@@ -7,7 +7,7 @@ class groupCtrl {
 		$this -> model = new groupMdl();
 	}
 	function validate_group($group) {
-		$pattern = '/^[a-z]{1}[a-z0-9][0-9]{3}-d[0-9]{2}/i';
+		$pattern = '/^[a-z]{1}[a-z0-9][0-9]{3}-d[0-9]{2}$/i';
 		if (preg_match($pattern, $group) == 1) {
 			return true;
 		}
