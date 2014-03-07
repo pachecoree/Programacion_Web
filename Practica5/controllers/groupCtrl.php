@@ -33,7 +33,7 @@ class groupCtrl {
 							}
 							else {
 								//load errors view
-								require('views/error.php');	
+								require('views/errors.php');	
 							}
 						}
 						else
@@ -50,6 +50,15 @@ class groupCtrl {
 							//insert data
 							require('controllers/actCtrl.php');
 							$activity = new actCtrl();
+							$studentinfo = $activity -> add_student();
+							if (is_array($studentinfo)) {
+								require('views/addStudenttogroup.php');
+							}
+							else {
+								require('views/errors.php');
+								$error_object = new errors();
+								$error_object -> student_add();
+							}
 						}
 						else
 							echo 'Group "', $_GET['group'],'" is not valid';

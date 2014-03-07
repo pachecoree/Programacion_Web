@@ -1,0 +1,13 @@
+
+URL $_GET
+
+agregar alumno 
+
+ctrl=group
+act=add
+group= ''
+secondlastname = ''
+firstlastname = ''
+name = ''
+phonenumber = xx-xx-xx-xx-xx
+email = ''
