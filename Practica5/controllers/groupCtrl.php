@@ -28,6 +28,7 @@ class groupCtrl {
 							$result = $this -> model -> getStudentsList($group);
 							if ($result['status']) {
 								//load list view
+								unset($result['status']);
 								require('views/groupStudentsList.php');
 							}
 							else {

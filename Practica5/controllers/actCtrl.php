@@ -3,7 +3,7 @@
 class actCtrl{
 
 	function __construct() {
-		echo 'added';
+		require('views/addStudenttogroup.php');
 	}
 }
 
